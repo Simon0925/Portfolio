@@ -11,7 +11,7 @@ export default function Header() {
     
 
     return (
-        <header className={` ${styles.wrap}`}>
+        <header className={`  dark:bg-gray-900 ${styles.wrap}`}>
             <TextTyping />
             <div className=' inline-block sm:hidden '>
                 <Toggle />

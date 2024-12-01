@@ -6,10 +6,10 @@ function App() {
   
 
   return (
-    <>
+    <div className='h-dvh bg-white dark:bg-gray-900'>
       <Header />
       <Main />
-    </>
+    </div>
   )
 }
 
