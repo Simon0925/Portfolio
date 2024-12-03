@@ -8,7 +8,16 @@ export default {
         'mono': ['FreeMono, monospace'],
         'sans': ['Arial, sans-serif'],
       },
-      
+      fontSize: {
+        xxs: '0.625rem', 
+      },
+    
+      minWidth: { 
+        boxs: '84px', 
+      },
+      maxWidth: { 
+        boxs: '84px', 
+      },
     },
   },
   plugins: [],

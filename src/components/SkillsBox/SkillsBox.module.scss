@@ -1,0 +1,26 @@
+.wrap {
+    display: block;
+    padding: 0.3rem 0.5rem;
+
+    .container{
+        justify-content: center;
+        display: flex;
+        width: 110px;
+        align-items: center;
+        gap: 0.5rem;
+       
+    }   
+    .img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .text {
+        font-size: 14px;
+        white-space: nowrap;
+       
+    }
+    
+}

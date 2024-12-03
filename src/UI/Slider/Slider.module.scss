@@ -1,0 +1,12 @@
+.wrap {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        box-sizing: border-box;
+    }
+}

@@ -6,14 +6,16 @@
 export default function AboutMe() {
 
     return (
-      <div>
-        <h2 className="text-2xl font-semibold transition-colors duration-300 hover:text-blue-500">About Me</h2>
-        <p className="">
+      <section className="flex flex-col items-center gap-4">
+        <h2 className="text-2xl text-black dark:text-white font-bold mb-2 transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400">
+          About Me
+        </h2>
+        <p className="text-black dark:text-white">
           I’m a Full Stack Developer with a passion for building complete web solutions,
           from dynamic front-end interfaces to robust back-end systems. My expertise lies in creating responsive,
           user-friendly applications using technologies like React, JavaScript, and Tailwind CSS on the front-end, 
-          while also working with Node.js, PostgreSQL, and RESTful APIs to power the back-end.
+          while also working with Node.js, PostgreSQL, MongoDB, and RESTful APIs to power the back-end.
         </p>
-      </div>
+      </section>
     );
 }
