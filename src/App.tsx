@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/Footer/Footer'
 import Header from './layout/Header/Header'
 import Main from './layout/Main/Main'
 
@@ -9,6 +10,8 @@ function App() {
     <div className=' bg-white dark:bg-gray-900'>
       <Header />
       <Main />
+      <hr/>
+        <Footer />
     </div>
   )
 }
