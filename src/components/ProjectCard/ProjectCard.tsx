@@ -10,7 +10,21 @@ interface ProjectCardProps {
 export default function ProjectCard({img}:ProjectCardProps) {
 
     return (
-      <div className='font-white border border-gray-200 bg-green-50 bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300'>
+      <div className='
+            font-white border
+            border-gray-200
+            bg-green-50
+            bg-opacity-10
+            backdrop-blur-lg 
+            rounded-lg 
+            shadow-lg 
+            overflow-hidden 
+            hover:shadow-xl 
+            transition-all 
+            duration-300 
+            transform 
+            hover:scale-110
+          '>
             <div className={styles.wrapperImg}>
                   <img className="w-full h-48 object-fit transition-transform duration-300 transform hover:scale-110" src={img}/>
             </div>  
