@@ -9,7 +9,7 @@ export default {
         'sans': ['Arial, sans-serif'],
       },
       fontSize: {
-        xxs: '0.625rem', 
+        xxs: '0.525rem', 
       },
     
       minWidth: { 

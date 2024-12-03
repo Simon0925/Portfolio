@@ -1,5 +1,6 @@
 import GitSVG from "../../svg/GitSVG/GitSVG";
 import LinkSVG from "../../svg/Link/LinkSVG";
+import SkillsContainer from "../SkillsContainer/SkillsContainer";
 import styles from "./ProjectCard.module.scss"
 interface ProjectCardProps {
     img:string;
@@ -31,10 +32,10 @@ export default function ProjectCard({img}:ProjectCardProps) {
             <div className="p-6">
               <h3 className="text-2xl text-gray-400 font-bold mb-3 transition-colors duration-300 hover:text-blue-500">Driving theory test</h3>
               <p className="text-gray-600 mb-4">
-                A web application built with React, JavaScript, and CSS. Our user-friendly interface simplifies the booking process, allowing you to secure your ideal accommodation in just a few clicks.
+              A web application built with React, JavaScript, and CSS. includes all revision questions, answers and explanations. Couple it with an intuitive interface and it becomes an ideal practice tool for the UK licence test for Cars!
               </p>
               <div className="lex space-x-2 mb-4">
-
+                 <SkillsContainer names={["TypeScript", "Node JS" ,"Mongodb","React","Git" ]} />
               </div>
               <div className="flex justify-between items-center">
                 <a href="" >

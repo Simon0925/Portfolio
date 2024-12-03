@@ -14,8 +14,8 @@ export default function ProfileBanner () {
                 Crafting elegant solutions for complex problems
             </p>
             <div className="flex justify-center space-x-4 mb-4 ">
-                <a href="https://www.linkedin.com/in/sam-yakovenko/" className="text-blue-500 hover:text-blue-600">LinkedIn</a>
-                <a href="https://github.com/Simon0925" className="text-gray-700 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">GitHub</a>
+                <a href="https://www.linkedin.com/in/sam-yakovenko/" className="text-blue-500 cursor-pointer hover:text-blue-600">LinkedIn</a>
+                <a href="https://github.com/Simon0925" className="text-gray-700 hover:text-gray-800 cursor-pointer dark:text-gray-300 dark:hover:text-gray-200">GitHub</a>
             </div>
             <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block mb-4">Download Resume</button>
        </div>
