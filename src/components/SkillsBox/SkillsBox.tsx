@@ -1,15 +1,8 @@
-import styles from './SkillsBox.module.scss'
-
-interface SkillsBoxProps {
-    name:string;
-    background:string;
-    img:string;
-    color:string
-}
+import {Skills} from '../../interface/interface'
 
 
 
-export default function SkillsBox({name,background,img,color}:SkillsBoxProps) {
+export default function SkillsBox({name,background,img,color}:Skills) {
 
     return (
       <div className="block px-1.5  py-1"  style={{background}} >

@@ -1,7 +1,7 @@
 import styles from './Slider.module.scss';
 import SkillsBox from '../../components/SkillsBox/SkillsBox';
 import { useEffect, useState } from 'react';
-import {logos} from './services/logos'
+import {logos} from '../../services/logos'
 
 export default function Slider() {
 

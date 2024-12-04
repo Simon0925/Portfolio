@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react";
-import { logos } from "./services/logos";
+import {logos} from '../../services/logos'
+import {Skills} from '../../interface/interface'
 
-interface Skills {
-    name: string;
-    background: string;
-    img: string;
-    color: string;
-}
-
-interface SkillsContainerProps {
+export interface SkillsContainerProps {
     names: string[];
 }
 
