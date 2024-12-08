@@ -12,6 +12,7 @@ function App() {
       <Main />
       <hr/>
         <Footer />
+        <div id="modal-root"></div>
     </div>
   )
 }

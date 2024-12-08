@@ -2,7 +2,7 @@ export interface ProjectCardProps {
     img:string;
     name:string;
     description:string;
-    technologies:[];
+    technologies: string[]; 
     link:string;
     git:string;
     id?:number

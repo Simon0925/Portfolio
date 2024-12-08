@@ -1,16 +1,24 @@
 import { useEffect, useState } from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import giphy from './img/giphy.gif';
 
 
 import { ProjectCardProps } from '../../interface/interface';
 import Spinner from "../../UI/Spinner/Spinner";
 import getProjects from "../../services/projects/getProjects";
+import Edit from "../Edit/Edit";
+import { useDispatch } from "react-redux";
+import { editData } from "../../store/edit/edit.slice";
+import ReactDOM from "react-dom";
+import Modal from "../Modal/Modal";
 
-export default function Projects() {
+export default function ProjectsAdmin() {
     const [projects, setProjects] = useState<ProjectCardProps[]>([]);
     const [loading, setLoading] = useState(true);
     const [visible, setVisible] = useState(4); 
+    const [modal,setModal] = useState(true)
+    const dispatch = useDispatch();
+    const modalRoot = document.getElementById("modal-root");
+
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -33,28 +41,30 @@ export default function Projects() {
         setVisible((prev) => (prev === 4 ? projects.length : 4)); 
     };
 
+    const edit = (img:string,name:string,description:string,technologies:string[],link:string,git:string,id?:number) =>{
+       
+        dispatch(editData({ img, name,description,technologies,link,git ,id}));
+        setModal(!modal)
+    }   
+
+  
  
 
     return (
-        <section className="flex flex-col items-center gap-4">
-            <div className="flex flex-wrap gap-2 justify-center">
-                <img src={giphy} alt="Work Experience" loading="lazy" className="w-10 h-8" />
-                <h2 className="text-2xl text-black dark:text-white font-bold mb-2 transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400">
-                    Projects
-                </h2>
-            </div>
+        <section className="flex flex-col pt-24 items-center gap-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {!loading && currentProjects.length > 0 ? 
                     currentProjects.map((project) => (
-                        <ProjectCard 
-                            key={project.id} 
-                            img={project.img} 
-                            name={project.name} 
-                            description={project.description}
-                            technologies={project.technologies} 
-                            link={project.link} 
-                            git={project.git} 
-                        />
+                        <div key={project.id}  onClick={() => edit(project.img,project.name,project.description,project.technologies,project.link,project.git,project.id)} className="cursor-pointer"> 
+                            <ProjectCard 
+                                img={project.img} 
+                                name={project.name} 
+                                description={project.description}
+                                technologies={project.technologies} 
+                                link={project.link} 
+                                git={project.git} 
+                            />
+                        </div>
                     )) : 
                     <Spinner />
                 }
@@ -71,6 +81,16 @@ export default function Projects() {
                 }
                
             </div>
+            {!modal&& modalRoot &&
+                ReactDOM.createPortal(
+                <Modal
+                    close={setModal}
+                    content={
+                        <Edit type={"add"}/>
+                    } 
+                />,modalRoot
+                )}
+        
         </section>
     );
 }

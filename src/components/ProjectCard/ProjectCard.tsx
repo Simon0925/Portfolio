@@ -25,7 +25,7 @@ export default function ProjectCard({img,name,description,technologies,link,git}
             hover:scale-105
           '>
             <div className={styles.wrapperImg}>
-                  <img className="w-full h-48 object-fit transition-transform duration-300 transform hover:scale-110" src={img}/>
+                  <img className="w-full h-48 object-fit transition-transform duration-300 transform hover:scale-110 " src={img}/>
             </div>  
             <div className="p-6">
               <h3 className="text-2xl text-gray-400 font-bold mb-3 transition-colors duration-300 hover:text-blue-500">{name}</h3>

@@ -11,14 +11,18 @@ export default {
       fontSize: {
         xxs: '0.525rem', 
       },
-    
+      height:{
+        h600 :"600px",
+      },
       minWidth: { 
         boxs: '84px', 
       },
       maxWidth: { 
         boxs: '84px', 
       },
-      
+      colors: {
+        'modal': 'rgba(0, 0, 0, 0.4)',
+      },
     },
   },
   plugins: [],
